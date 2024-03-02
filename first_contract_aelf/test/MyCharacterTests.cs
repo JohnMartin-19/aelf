@@ -2,6 +2,8 @@ using System.Threading.Tasks;
 using Google.Protobuf.WellKnownTypes;
 using Shouldly;
 using Xunit;
+using System;
+using AElf.Sdk.CSharp;
 
 namespace AElf.Contracts.MyCharacter
 {
@@ -9,19 +11,14 @@ namespace AElf.Contracts.MyCharacter
     public class MyCharacterTests : TestBase
     {
         [Fact]
-        public async Task Update_ShouldUpdateMessageAndFireEvent()
+        public async Task Rng_Test()
         {
-            // Arrange
-            var inputValue = "Hello, World!";
-            var input = new StringValue { Value = inputValue };
+            await MyCharacterStub.Initialize.SendAsync(new Empty());
+            var result = await MyCharacterStub.CreateCharacter.SendAsync(new Empty());
+            var character = await MyCharacterStub.GetMyCharacter.CallAsync(Accounts[0].Address);
 
-            // Act
-            await MyCharacterStub.Update.SendAsync(input);
-
-            // Assert
-            var updatedMessage = await MyCharacterStub.Read.CallAsync(new Empty());
-            updatedMessage.Value.ShouldBe(inputValue);
+           Assert.NotEqual(new Character(), character);
+           Assert.Equal(result.Output, character);
         }
-    }
-    
+    }    
 }

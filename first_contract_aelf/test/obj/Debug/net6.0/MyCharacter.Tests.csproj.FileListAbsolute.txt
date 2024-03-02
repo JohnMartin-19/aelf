@@ -1,0 +1,6 @@
+/home/the-backend-dev/Desktop/aelf/first_contract_aelf/test/obj/Debug/net6.0/MyCharacter.Tests.csproj.AssemblyReference.cache
+/home/the-backend-dev/Desktop/aelf/first_contract_aelf/test/obj/Debug/net6.0/MyCharacter.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/home/the-backend-dev/Desktop/aelf/first_contract_aelf/test/obj/Debug/net6.0/MyCharacter.Tests.AssemblyInfoInputs.cache
+/home/the-backend-dev/Desktop/aelf/first_contract_aelf/test/obj/Debug/net6.0/MyCharacter.Tests.AssemblyInfo.cs
+/home/the-backend-dev/Desktop/aelf/first_contract_aelf/test/obj/Debug/net6.0/MyCharacter.Tests.csproj.CoreCompileInputs.cache
+/home/the-backend-dev/Desktop/aelf/first_contract_aelf/test/obj/Debug/net6.0/MyCharacter.Tests.sourcelink.json
